@@ -159,35 +159,32 @@ Create another organizational unit in ADUC called "_CLIENTS" and in the Computer
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/cf730c0f-4044-491c-8c8e-8dd37c0c55f2)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Allow domain users to log in to client-1, right click start -> system -> remote desktop -> select users that can remotely access the PC -> add -> type domain users -> check names -> OK
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/ac65d867-8e87-4ecf-b2c9-bc7132c7481e)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now logging back into dc-1 we will create users, copy this link -> https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1 and open it in the browser of your choice and you will find "copy raw file", copy that and open up Powershell ISE as an admin, select a new script at the top left of the window under "file" and paste in this script, I changed the user count to 500 from 10000 because we do not need that many new user accounts (line 3) for reference
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/3e36da68-fe62-4d0e-9f94-c6994567b798)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Select "Run" and it will create 500 employees
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/feb83037-9fa7-4e4a-8814-553b7491203b) ![image](https://github.com/user-attachments/assets/a9d830a0-0074-4b16-a460-62e9d2f571ae)
+
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now if we go over to ADUC, we can select "_EMPOYEES" and notice that all the new users have been added to the system. Now log into client-1 as one of these users as mydomain.com\" " Open up your file folder and locate "users" and notice the user you selected "fes.nubip" in my case appears along with jane_admin which we logged on with earlier
 </p>
 <br />
 
