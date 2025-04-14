@@ -184,30 +184,48 @@ Select "Run" and it will create 500 employees
 
 
 <p>
-Now if we go over to ADUC, we can select "_EMPOYEES" and notice that all the new users have been added to the system. Now log into client-1 as one of these users as mydomain.com\" " Open up your file folder and locate "users" and notice the user you selected "fes.nubip" in my case appears along with jane_admin which we logged on with earlier
+Now if we go over to ADUC, we can select "_EMPOYEES" and notice that all the new users have been added to the system. Now log into client-1 as one of these users as mydomain.com\" " Open up your file folder and locate "users" and notice the user you selected "fes.nubip" in my case appears along with jane_admin which we logged on with earlier, once finished, log out of your new user in client-1
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/2040c938-913b-44b5-bfe8-3a1c81384016)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In dc-1 we are going to configure the account lockout policy. In the search bar "group policy management" expand the top drop down lists, click default domain policy -> right click default domain policy -> edit -> policies -> windows settings -> security settings -> account policies -> account lockout policy
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/8946986d-020c-4dee-a8eb-b26a936432fb)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Set the policy as shown for each parameter, change them as you wish later, this is the easiest set to demonstrate with what is possible
 </p>
 <br />
 
+![image](https://github.com/user-attachments/assets/37cf4cab-459d-4d1a-bba8-c20e02613176)
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Log back into client-1 as jane_admin and force the group policy update "gpupdate /force" to make the update take effect immediately
 </p>
+<br />
+
+![image](https://github.com/user-attachments/assets/e9e24b89-bab9-4cfe-b9bc-f33ed87a7861)
+
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Attempt to log on an excessive amount of times until you get this security login error, we have exceeded our login attempts
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/7cb98f7d-3a7b-4d79-a99f-d01fe95ee266)
+
+<p>
+Back to dc-1, under ADUC, find your user under employees select account -> unlock account -> apply -> OK. Now if you attempt to log back into client-1 as your selected user, you will find that you are no longer logged out, if you wish to reset your password, you may do so by right clicking on the username and select reset password, but active directory is much more powerful and I suggest playing around with the settings and finding out what else you can learn
+</p>
+<br />
+
+![image](https://github.com/user-attachments/assets/29aaf817-8206-4e25-80b7-0e74d719dd16)
+
+<p>
+Additionally right clicking on the user, we are able to disable the account if need be, and if you look closely, it changes the status next to their user icon, in which it can also be re-enabled. This concludes the session and again this is a very powerful tool, I encourage looking more into group policy and seeing where and what you can change in order to get a better grasp on best practices and familiarizing yourself with what is possible
 </p>
 <br />
