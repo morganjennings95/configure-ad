@@ -23,8 +23,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Setup 2 virtual machines, 1 running windows server & 1 running windows 10 on the same VPN
 - Setup active directory on the domain controller and create random users
-- Step 3
-- Step 4
+- Change Group Policy to enable and disable permissions and parameters
+- Utilize active directory to solve problems
 
 <h2>Deployment and Configuration Steps</h2>
 
